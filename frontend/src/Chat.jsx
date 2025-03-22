@@ -20,7 +20,7 @@ export default function Chat() {
     connectToWs();
   }, [selectedUserId]);
   function connectToWs() {
-    const ws = new WebSocket('https://chat-app-1uod.onrender.com');
+    const ws = new WebSocket('ws://chat-app-1uod.onrender.com');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
